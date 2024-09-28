@@ -1,0 +1,7 @@
+node_modules
+.vscode
+_site
+.github
+.lazyimages.json
+netlify.toml
+package-lock.json

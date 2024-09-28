@@ -1,0 +1,22 @@
+---
+title: List of all tags
+layout: layouts/blog.njk
+permalink: /tags/
+eleventyNavigation:
+  key: Tags
+  weight: 1
+---
+
+<div class="container">
+
+  <span class="section-title"><img src="/static/images/compass.svg"> All Tags</span>
+
+  <div class="tags tag-list">
+    {% for tag in collections.tagList %}
+    <div class="tag-info">
+      <a href="{{ '/tags/' | url }}{{ tag.tagName | slug }}">{{ tag.tagName }}</a>
+      <span>{{ tag.tagCount }} Posts</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>

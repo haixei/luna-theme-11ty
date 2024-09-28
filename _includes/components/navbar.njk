@@ -1,0 +1,27 @@
+{% set navPages = collections.all | eleventyNavigation %}
+<nav class="main-nav">
+    <div class="navbar__content" id="links">
+    <div class="navbar__links">
+    {% for entry in navPages %}
+      <a class="navbar__link {% if entry.url == page.url %}navbar__link--active{% endif %}" href="{{ entry.url | url }}">
+        {{ entry.title }}
+      </a>
+    {%- endfor %}
+    </div>
+    <div class="navbar__buttons">
+      <button id="themeBtn">
+        <img src="/static/images/sun.svg" id="sun">
+        <img src="/static/images/moon.svg" id="moon">
+      </button>
+      <button class="search-btn" id="search-btn"><img src="/static/images/search.svg"></button>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const searchBtn = document.getElementById("search-btn")
+  searchBtn.onclick = () => {
+    console.log("a1")
+    searchWrapper.classList.remove("hidden")
+  }
+</script>

@@ -1,0 +1,21 @@
+---
+layout: layouts/blog.njk
+pagination:
+  data: collections.seriesList
+  size: 1
+  alias: serie
+permalink: /series/{{ serie | slug }}/
+---
+
+{% block content %}
+
+<div class="container">
+  <span class="section-title">Serie of <a href="{{ '/series/' | url }}{{ serie | slug }}">{{ serie | fullSeriesName }}</a></span>
+
+  {% set posts = collections.post | filterBySerie%}
+  {% include 'components/postslist.njk' %}
+
+  <a href="{{ '/series/' | url }}" class="button-link">See all series</a>
+</div>
+
+{% endblock %}

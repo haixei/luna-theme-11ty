@@ -1,0 +1,14 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="blog-wrapper">
+    <div class="header--site">
+      {% include 'components/navbar.njk' %}
+      {% include 'components/headerbig.njk' %}
+    </div>
+    <content>
+      {{ content | safe }}
+      {% include 'components/footer.njk' %}
+    </content>
+ </div>

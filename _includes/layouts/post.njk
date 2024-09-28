@@ -1,0 +1,33 @@
+---
+layout: layouts/blog.njk
+---
+
+<div class="container relative">
+  {% if coverIMG %}
+    <img src="{{ coverIMG }}" class="post__cover">
+  {% endif %}
+  <div class="toc-wrapper">
+    <span>Table Of Contents</span>
+    {{ content | toc | safe }}
+  </div>
+  {% if seriesName %}
+    <span class="series {% if seriesName in series.names %}{{ seriesName }}{% endif %}">{{ seriesName | fullSeriesName }}</span>
+  {% endif %}
+  <h1>{{ title }}</h1>
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
+  
+  <br><hr>
+  {% if not hideTagsList %}
+    <div class="tags">
+      {% for tag in tags %}
+        {% if tag != 'post' %}
+          <a href="{{ '/tags/' | url }}{{ tag | slug }}">{{ tag }}</a>
+        {% endif %}
+      {% endfor %}
+    </div>
+  {% endif %}
+  <br><br>
+  <a href="{{ '/' | url }}" class="button-link">Back home</a>
+</div>

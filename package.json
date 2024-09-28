@@ -1,0 +1,37 @@
+{
+  "name": "Luna",
+  "version": "1.0.0",
+  "license": "MIT",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy-navigation": "^0.3.5",
+    "@11ty/eleventy-plugin-rss": "^1.2.0",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^5.0.0",
+    "concurrently": "^8.2.1",
+    "eleventy-plugin-bibtex": "^0.1.1",
+    "eleventy-plugin-lazyimages": "^2.1.2",
+    "eleventy-plugin-mathjax": "^2.0.4",
+    "eleventy-plugin-toc": "^1.1.5",
+    "luxon": "^3.4.2",
+    "markdown-it": "^14.0.0",
+    "markdown-it-anchor": "^8.6.7",
+    "pagefind": "^1.0.4"
+  },
+  "scripts": {
+    "build:11ty": "eleventy",
+    "watch:11ty": "eleventy --serve",
+    "watch:sass": "npx sass styles:static/css --watch",
+    "build": "npm run build:11ty",
+    "dev": "concurrently -n styles,11ty \"npm:watch:sass\" \"npm:watch:11ty\""
+  },
+  "dependencies": {
+    "d3": "^7.8.5",
+    "markdown-it-easy-tables": "^0.1.1",
+    "markdown-it-footnote": "^4.0.0",
+    "markdown-it-mark": "^4.0.0",
+    "markdown-it-sub": "^2.0.0",
+    "markdown-it-sup": "^2.0.0",
+    "markdown-it-task-lists": "^2.1.1",
+    "sass": "^1.69.3"
+  }
+}

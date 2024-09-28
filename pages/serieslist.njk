@@ -1,0 +1,22 @@
+---
+title: List of all tags
+layout: layouts/blog.njk
+permalink: /series/
+eleventyNavigation:
+  key: Series
+  weight: 1
+---
+
+<div class="container">
+
+  <span class="section-title"><img src="/static/images/compass.svg"> All series</span>
+
+  <div class="series-list">
+    {% for serie, data in collections.seriesList %}
+    <div class="serie-info">
+      <a href="{{ '/series/' | url }}{{ serie | slug }}/" class="series {{ serie }}">{{ data.longName }}</a>
+      <span>{{ data.postCount }} Posts</span>
+    </div>
+    {% endfor %}
+  </div>
+</div>

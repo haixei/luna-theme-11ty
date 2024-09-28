@@ -1,0 +1,19 @@
+<div id="search" class="search hidden"></div>
+<link href="/_pagefind/pagefind-ui.css" rel="stylesheet">
+<script src="/_pagefind/pagefind-ui.js" onload="new PagefindUI({ element: '#search', showImages: false });"></script>
+<script>
+const searchBar = document.getElementsByClassName("pagefind-ui")[0]
+const searchWrapper = document.getElementById("search")
+
+const onClickOutside = (element, callback) => {
+  searchWrapper.addEventListener("click", (e) => {
+    if (!element.contains(e.target)) callback()
+  })
+}
+
+onClickOutside(searchBar, () => {
+    if(!searchWrapper.classList.contains("hidden")){
+        searchWrapper.classList.add("hidden")
+    }
+})
+</script>

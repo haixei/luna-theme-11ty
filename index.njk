@@ -1,0 +1,30 @@
+---
+eleventyComputed:
+  title: "{% if pagination.pageNumber > 0 %}Page {{ pagination.pageNumber + 1 }}{% else %}Homepage{% endif %}"
+layout: layouts/blog.njk
+permalink: /{% if pagination.pageNumber > 0 %}page-{{ pagination.pageNumber + 1 }}/{% endif %}
+pagination:
+  data: collections.post
+  size: 6
+  alias: posts
+  reverse: true
+eleventyNavigation:
+  key: Home
+  weight: 0
+---
+
+<div class="container">
+  <span class="section-title">
+    <img src="./static/images/pencil.svg"> Latest Posts
+    {%- if pagination.pageNumber != 0 %} - Page {{ pagination.pageNumber + 1 }}{% endif %}
+  </span>
+  {% include "components/postslist.njk" %}
+  <div class="pagination">
+      {% if pagination.previous %}
+        <a href="{{ pagination.href.previous | url }}" class="pagination__prev button-link">Prev Page</a>
+      {% endif %}
+      {% if pagination.next %}
+        <a href="{{ pagination.href.next | url }}" class="pagination__next button-link">Next Page</a>
+      {% endif %}
+  </div>
+</div>
