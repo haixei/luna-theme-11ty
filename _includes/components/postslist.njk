@@ -2,7 +2,7 @@
   {% for post in posts %}
     <div class="card">
       {% if post.data.seriesName %}
-        <span class="series {% if post.data.seriesName in series.names %}{{ post.data.seriesName }}{% endif %}">{{ post.data.seriesName | fullSeriesName }}</span>
+        <span class="series {{ post.data.seriesName }}">{{ post.data.seriesName | fullSeriesName }}</span>
       {% endif %}
       {% if post.data.coverIMG %}
         <img src="{{ post.data.coverIMG }}" class="card__cover">

@@ -1,7 +1,6 @@
 module.exports = {
-  names: ["casual", "programming"],
-  expanded: [{
+  casual: {
     name: "casual",
     longName: "Casual updates"
-  }]
+  }
 }

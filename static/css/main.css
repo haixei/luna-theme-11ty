@@ -24,7 +24,7 @@ body[data-theme=light] {
   --primary: #694d96;
   --primary-bg-color: #f4ecfc;
   --primary-bd-color: #e5ccfa;
-  --highlighter: #fdd9fb;
+  --highlighter: #ead9fd;
 }
 body[data-theme=light] #sun {
   display: none;

@@ -49,7 +49,7 @@ module.exports = (config) => {
   })
 
   config.addFilter("fullSeriesName", seriesName => {
-    return seriesData.expanded.find(obj => obj.name == seriesName).longName
+    return seriesData[seriesName].longName
   })
 
   config.addFilter("filterBySerie", (collection, seriesName) => {
@@ -94,7 +94,7 @@ module.exports = (config) => {
 
     const seriesExpanded = {}
     Object.keys(seriesObject).forEach(series => {
-      seriesExpanded[series] = { name: series, postCount: seriesObject[series], longName: seriesData.expanded.find(obj => obj.name == series).longName}
+      seriesExpanded[series] = { name: series, postCount: seriesObject[series], longName: seriesData[series].longName}
     })
 
     return seriesExpanded
