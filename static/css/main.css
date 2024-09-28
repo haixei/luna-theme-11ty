@@ -795,4 +795,15 @@ table tr:first-child td {
   margin-right: 0.2rem;
 }
 
+@media (max-width: 750px) {
+  .blog-wrapper, .main-nav {
+    width: 550px;
+  }
+}
+@media (max-width: 550px) {
+  .blog-wrapper, .main-nav {
+    width: 430px;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
