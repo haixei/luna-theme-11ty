@@ -86,6 +86,9 @@ body[data-theme="dark"]{
     .banner{
         background-image: url("https://w0.peakpx.com/wallpaper/937/333/HD-wallpaper-aesthetic-clouds-blue-samsung-amoled-black-dark-night-sky-one-plus.jpg");
     }
+    #search .pagefind-ui .pagefind-ui__search-input{
+        border: 1px solid #484852;
+    }
 }
 
 body, a, span, p{
@@ -700,7 +703,7 @@ table tr:first-child td {
 
 #search .pagefind-ui .pagefind-ui__search-input{
     border: 1px solid var(--border-color);
-    box-shadow: 0 0 40px 20px #12121321;
+    box-shadow: 0 0 40px 20px #1212132d;
     font-weight: 500;
     font-family: 'Open Sans', sans-serif;
     color: var(--text-dark);
@@ -752,6 +755,16 @@ table tr:first-child td {
     border-color: var(--primary-bd-color);
     color: var(--primary);
     background-color: var(--primary-bg-color);
+}
+
+#search .pagefind-ui .pagefind-ui__search-input::placeholder{
+    color: var(--text-light);
+    opacity: 1;
+}
+
+#search .pagefind-ui .pagefind-ui__form::before{
+    background-color: var(--text-light)!important;
+    opacity: 0.6;
 }
 
 #search{
