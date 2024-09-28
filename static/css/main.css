@@ -26,12 +26,6 @@ body[data-theme=light] {
   --primary-bd-color: #e5ccfa;
   --highlighter: #ead9fd;
 }
-body[data-theme=light] #sun {
-  display: none;
-}
-body[data-theme=light] #moon {
-  display: block;
-}
 
 body[data-theme=dark] {
   --background-color-site: #212124;
@@ -46,18 +40,27 @@ body[data-theme=dark] {
   --primary-bd-color: #39355c;
   --highlighter: #2d275e;
 }
+body[data-theme=dark] .banner {
+  background-image: url("/static/images/banner-dark.jpg");
+}
+body[data-theme=dark] #search .pagefind-ui .pagefind-ui__search-input {
+  border: 1px solid #484852;
+}
+
+.banner {
+  background-image: url("/static/images/banner-light.jpeg");
+}
+
+body[data-theme=light] #sun {
+  display: none;
+}
+body[data-theme=light] #moon {
+  display: block;
+}
+
 body[data-theme=dark] .button-link {
   background-color: var(--primary-bg-color);
   color: var(--primary);
-}
-body[data-theme=dark]::-webkit-scrollbar-thumb {
-  background-color: #26262c;
-  border-radius: 20px;
-  border: 6px solid transparent;
-  background-clip: content-box;
-}
-body[data-theme=dark]::-webkit-scrollbar-thumb:hover {
-  background-color: #2e2e38;
 }
 body[data-theme=dark] #sun {
   display: block;
@@ -74,19 +77,6 @@ body[data-theme=dark] .search-btn img {
 }
 body[data-theme=dark] .section-title img {
   filter: invert(1);
-}
-body[data-theme=dark] .block {
-  background-color: rgba(26, 26, 29, 0.2588235294);
-}
-body[data-theme=dark] .block img {
-  filter: invert(0);
-  opacity: 0.8;
-}
-body[data-theme=dark] .banner {
-  background-image: url("https://w0.peakpx.com/wallpaper/937/333/HD-wallpaper-aesthetic-clouds-blue-samsung-amoled-black-dark-night-sky-one-plus.jpg");
-}
-body[data-theme=dark] #search .pagefind-ui .pagefind-ui__search-input {
-  border: 1px solid #484852;
 }
 
 body, a, span, p {
@@ -184,7 +174,6 @@ footer {
   height: 240px;
   border-radius: 8px 8px 0 0;
   background-color: var(--background-color-darker);
-  background-image: url("https://images.pexels.com/photos/17650981/pexels-photo-17650981/free-photo-of-dark-clouds-and-crescent-moon-on-evening-sky.jpeg");
   background-position: center;
   background-size: cover;
   z-index: 10;

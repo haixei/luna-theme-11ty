@@ -1,0 +1,51 @@
+:root{
+    --background-color-site: #fafafa;
+    --background-color-darker: #f4f5f8;
+    --background-color: #ffffff;
+    --border-color: #dde4e7;
+    --text-dark: #3d3f41;
+    --text-gray: #515558;
+    --text-light: #86898a;
+    --primary: #694d96;
+    --primary-bg-color: #f4ecfc;
+    --primary-bd-color: #e5ccfa;
+    --highlighter: #fdd9fb;
+}
+
+body[data-theme="light"]{
+    --background-color-site: #fafafa;
+    --background-color-darker: #f4f5f8;
+    --background-color: #ffffff;
+    --border-color: #dde4e7;
+    --text-dark: #3d3f41;
+    --text-gray: #515558;
+    --text-light: #86898a;
+    --primary: #694d96;
+    --primary-bg-color: #f4ecfc;
+    --primary-bd-color: #e5ccfa;
+    --highlighter: #ead9fd;
+}
+
+body[data-theme="dark"]{
+    --background-color-site: #212124;
+    --background-color-darker: #1a1a1d;
+    --background-color: #26262c;
+    --border-color: #36363d;
+    --text-dark: #c2c2c2;
+    --text-gray: #a0a0a0;
+    --text-light: #818181;
+    --primary: #a895d4;
+    --primary-bg-color: #26253b;
+    --primary-bd-color: #39355c;
+    --highlighter: #2d275e;
+    .banner{
+        background-image: url("/static/images/banner-dark.jpg");
+    }
+    #search .pagefind-ui .pagefind-ui__search-input{
+        border: 1px solid #484852;
+    }
+}
+
+.banner{
+    background-image: url("/static/images/banner-light.jpeg");
+}

@@ -11,7 +11,7 @@ layout: layouts/blog.njk
     {{ content | toc | safe }}
   </div>
   {% if seriesName %}
-    <span class="series {% if seriesName in series.names %}{{ seriesName }}{% endif %}">{{ seriesName | fullSeriesName }}</span>
+    <span class="series {% if series[seriesName] %}{{ seriesName }}{% endif %}">{{ seriesName | fullSeriesName }}</span>
   {% endif %}
   <h1>{{ title }}</h1>
   <div class="post-content">
