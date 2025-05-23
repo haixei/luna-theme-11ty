@@ -10,37 +10,37 @@
     --primary-bg-color: #f5f3fc;
     --primary-bd-color: #d0caf1;
     --highlighter: #e5dcff;
+    --fontmedium: 1.05rem;
+    --fontsmall: 0.95rem;
 }
 
 body[data-theme="light"]{
     --background-color-site: #fffffe;
-    --background-color-darker: #fcf4f2;
+    --background-color-darker: #fcf2f2;
     --background-color: #ffffff;
-    --border-color: #d8d3ce;
+    --border-color: #c5c3c3;
     --text-dark: #302e2d;
     --text-gray: #575252;
-    --text-light: #7a7574;
-    --primary: #50998f;
-    --primary-bg-color: #f7fdfb;
-    --primary-bd-color: #b3d1c2;
-    --highlighter: #d5f7f2;
+    --text-light: #838383;
+    --primary: #975ec5;
+    --primary-bg-color: #fbf7fd;
+    --primary-bd-color: #dec6f5;
+    --highlighter: #edd7ff;
 }
 
 body[data-theme="dark"]{
     --background-color-site: #1c1c1d;
     --background-color-darker: #18181a;
     --background-color: #2b2b31;
-    --border-color: #38383a;
-    --text-dark: #c2c2c2;
-    --text-gray: #a0a0a0;
+    --border-color: #444447;
+    --text-dark: #cccccc;
+    --text-gray: #b4b4b4;
     --text-light: #818181;
-    --primary: #7ec5bc;
-    --primary-bg-color: #253b38;
-    --primary-bd-color: #355b5c;
-    --highlighter: #1c493b;
+    --primary: #b08fd4;
+    --primary-bg-color: #30253b;
+    --primary-bd-color: #583e69;
+    --highlighter: #553966;
     #search .pagefind-ui .pagefind-ui__search-input{
         border: 1px solid #484852;
     }
 }
-
-$fontmedium: 1.05rem;

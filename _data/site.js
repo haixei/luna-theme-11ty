@@ -1,6 +1,6 @@
 module.exports = {
   meta: {
-    title: "Alex's Blog",
+    title: "aleks.blog",
     description: "I like to build things. Software eng.",
     lang: "en",
     siteUrl: "https://example.com/",
@@ -15,7 +15,7 @@ module.exports = {
     authorEmail: "maryjane@example.com"
   },
   socials: {
-    mastodon: "/",
+    bluesky: "/",
     instagram: "/"
   }
 }

@@ -3,7 +3,7 @@ title: Introduction to the markdown.
 description: This is a post that showcases most of the markdown possibilities.
 date: 2024-01-31
 seriesName: casual
-coverIMG: https://i.pinimg.com/736x/4b/e6/d5/4be6d501d3efb33c84bba250fe1658bf.jpg
+coverIMG: https://i.pinimg.com/736x/a9/a7/74/a9a7745519508d63c7cfef00ef4de05c.jpg
 tags:
  - tutorial
 ---

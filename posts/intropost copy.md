@@ -68,5 +68,3 @@ It can be hard to track all of the things you have to do if your text is complic
 - [ ] Think of more than one post
 
 Now it's time to get to work.
-
-[^markdown-capabilities]: [Zotero is a useful tool for that btw.](https://www.zotero.org/)

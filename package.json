@@ -20,9 +20,8 @@
   "scripts": {
     "build:11ty": "eleventy",
     "watch:11ty": "eleventy --serve",
-    "watch:sass": "npx sass styles:static/css --watch",
     "build": "npm run build:11ty",
-    "dev": "concurrently -n styles,11ty \"npm:watch:sass\" \"npm:watch:11ty\""
+    "serve": "npx @11ty/eleventy --serve"
   },
   "dependencies": {
     "d3": "^7.8.5",

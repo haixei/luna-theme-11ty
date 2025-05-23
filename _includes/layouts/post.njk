@@ -2,20 +2,11 @@
 layout: layouts/blog.njk
 ---
 
-<div class="container relative">
+<div class="post">
   {% if coverIMG %}
     <img src="{{ coverIMG }}" class="post__cover">
   {% endif %}
   <h1>{{ title }}</h1>
-  <div class="toc-wrapper">
-    <span class="toc-header">Table Of Contents</span>
-    {{ content | toc | safe }}
-  </div>
-  <div class="post-content">
-    {{ content | safe }}
-  </div>
-  
-  <br><hr>
   {% if not hideTagsList %}
     <div class="tags">
       {% for tag in tags %}
@@ -26,5 +17,14 @@ layout: layouts/blog.njk
     </div>
   {% endif %}
   <br><br>
+  <div class="toc-wrapper">
+    <span class="toc-header">Table Of Contents</span>
+    {{ content | toc | safe }}
+  </div>
+  <div class="post-content">
+    {{ content | safe }}
+  </div>
+  
+  <br><hr>
   <a href="{{ '/' | url }}" class="button-link">Back home</a>
 </div>

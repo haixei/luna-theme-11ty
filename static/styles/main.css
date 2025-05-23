@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,200..900;1,200..900&display=swap');
-@import 'variables.scss';
+@import 'variables.css';
 
 body[data-theme="light"]{
     #sun{
@@ -32,14 +32,10 @@ body[data-theme="dark"]{
     .section-title img{
         filter: invert(1);
     }
-    .casual{
-        color: #857ab9;
-    }
 }
 
 body, a, span, p, ul, ol, table{
     font-family: monospace;
-    line-height: 1rem;
 }
 
 code span{
@@ -50,16 +46,15 @@ body {
     min-height: 100vh;
 }
 
-.main-content{
-    display: grid;
-    grid-template-columns: 1fr 3fr;
-    padding: 70px 0 50px;
-    column-gap: 40px;
+ul{
+    li::marker{
+        color: var(--text-light);
+    }
 }
 
 .series{
     width: fit-content;
-    font-size: $fontmedium;
+    font-size: var(--fontmedium);
     display: flex;
     align-items: center;
     color: #8a8a8a;
@@ -97,22 +92,26 @@ h1, h2, h3, h4, h5{
     margin: 0;
     font-weight: 400;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 1.5rem 0 0.5rem;
+    line-height: auto;
 }
 
-p{
-    font-size: $fontmedium;
+p, ul li{
+    font-size: var(--fontmedium);
     line-height: 1.6rem;
     color: var(--text-gray);
 }
 
 .blog-wrapper{
     width: 900px;
-    margin: 0 auto;
+    margin: 70px auto;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: 40px;
 }
 
 .card-page-wrapper{
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -135,6 +134,13 @@ footer{
     }
 }
 
+.sidebar{
+    position: sticky;
+    top: 20px;
+    height: fit-content;
+    width: 100%;
+}
+
 .avatar{
     width: auto;
     height: 80px;
@@ -148,17 +154,16 @@ footer{
 }
 
 .main-nav{
-    position: fixed;
-    top: 10px;
     border-top: none;
     z-index: 90;
-    width: 900px;
+    width: 100%;
     background-color: var(--background-color-site);
     border: 1px solid var(--border-color);
     padding: 10px 15px;
     border-radius: 5px;
     box-sizing: border-box;
     text-transform: lowercase;
+    margin-top: 5px;
 }
 
 .header-big a{
@@ -176,7 +181,7 @@ footer{
     border-radius: 5px;
     p{
         color: var(--text-gray);
-        font-size: 0.9rem;
+        font-size: var(--fontsmall);
         line-height: 1.2rem;
         max-width: 250px;
         margin: .5rem 0 0 0;
@@ -194,7 +199,7 @@ footer{
     flex-direction: row;
     a{
         margin-right: 1rem;
-        font-size: $fontmedium;
+        font-size: var(--fontsmall);
         color: var(--primary);
         transition: 0.2s;
     }
@@ -217,7 +222,7 @@ footer{
 
 .user-name{
     margin: 0;
-    font-size: $fontmedium;
+    font-size: var(--fontmedium);
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
@@ -278,7 +283,7 @@ footer{
     padding-bottom: 20px;
     border-bottom: 1px solid var(--border-color);
     p{
-        font-size: $fontmedium;
+        font-size: var(--fontmedium);
         color: var(--text-gray);
         margin: 1rem 0 1.5rem;
     }
@@ -323,7 +328,7 @@ footer{
 }
 
 .card-info-group .card__date{
-    font-size: $fontmedium;
+    font-size: var(--fontsmall);
     margin: 0 1rem 0 0;
     color: var(--text-light)!important;
 }
@@ -338,7 +343,7 @@ footer{
 .tags a, .tag-el{
     margin-right: 0.25rem;
     border-radius: 4px;
-    font-size: $fontmedium;
+    font-size: var(--fontsmall);
     padding: 3px 9px;
     transition: all 0.2s;
     color: var(--text-gray);
@@ -388,6 +393,13 @@ footer{
     margin: 1rem 0;
 }
 
+.post{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
 .post-content p img{
     width: auto;
     max-width: 100%;
@@ -402,20 +414,12 @@ footer{
 }
 
 .post-content p{
-    font-size: $fontmedium;
-    line-height: 1.7rem;
+    font-size: var(--fontmedium);
     color: var(--text-gray);
 }
 
-@mixin headings {
-    h1, h2, h3,
-    h4, h5, h6 {
-        @content;
-    }
-}
-
 ul, ol{
-    font-size: $fontmedium;
+    font-size: var(--fontmedium);
     li{
         margin-bottom: 0.5rem;
         a{
@@ -435,17 +439,13 @@ blockquote{
     border-left: 4px solid var(--border-color);
     margin: 0;
     padding-left: 1.5rem;
-    font-size: $fontmedium;
+    font-size: var(--fontmedium);
     line-height: 1.6rem;
     color: var(--text-gray);
     font-family: 'Courier New', Courier, monospace;
 }
 
 .post-content, .now-wrapper{
-    @include headings{
-        margin: 1.5rem 0 0.5rem;
-    }
-
     mark{
         background-color: var(--highlighter);
         color: var(--text-dark);
@@ -469,7 +469,7 @@ li a, p a{
 img + em{
     width: auto; 
     display: block;
-    font-size: 0.95rem;
+    font-size: var(--fontsmall);
     text-align: center;
 }
 
@@ -491,10 +491,10 @@ hr{
     border: 1px solid var(--primary-bd-color);
     border-radius: 4px;
     padding: 9px 14px;
-    font-size: 1.1rem;
+    font-size: var(--fontmedium);
     text-decoration: none;
     font-weight: 500;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     display: block;
     width: fit-content;
 }
@@ -511,7 +511,7 @@ hr{
     align-items: center;
     margin: 1rem 0 0 0;
     span{
-        font-size: 1.2rem;
+        font-size: var(--fontsmall);
         margin-left: 0.3rem;
         color: #5a5a5a;
     }
@@ -531,7 +531,7 @@ p a{
         opacity: 0.8;
     }
     a{
-        margin: 0.5rem 0.3rem 0 0;
+        margin: 1rem 0.5rem 0 0;
     }
 }
 
@@ -548,26 +548,25 @@ p a{
 }
 
 .toc-wrapper{
+    width: 100%;
     border-bottom: 1px solid var(--border-color);
     padding: 0 0 1.5rem 0;
-    margin: 0 0 1.5rem;
+    margin: 1.5rem 0;
     span{
-        font-size: 0.95rem;
-        margin: 2rem 0 1rem;
+        font-size: var(--fontmedium);
+        margin: 0 0 1rem 0;
         display: block;
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
     ol {
         counter-reset: cupcake;
 	    list-style: none;
         padding: 0;
-        margin: 0.8rem 0 0 0;
+        margin: 0.5rem 0 0 0;
         li {
-            margin-bottom: 0.8rem;
             counter-increment: cupcake;
             a{
                 color: var(--primary);
-                font-size: $fontmedium;
+                font-size: var(--fontmedium);
                 text-decoration: none;
             }
             ol{
@@ -594,7 +593,7 @@ table, th, td {
 
 table{
     border-collapse: collapse;
-    font-size: $fontmedium;
+    font-size: var(--fontmedium);
     max-width: 100%;
     max-height: 300px;
     overflow: scroll;
@@ -634,19 +633,22 @@ table tr:first-child td {
 }
 
 .about-span{
-    font-size: 0.9rem;
+    font-size: var(--fontsmall);
     display: flex;
     flex-direction: row;
     margin-bottom: 0.5rem;
-    &-bolder{
-        font-weight: 600;
-        margin-right: 0.5rem;
-        color: var(--text-light);
-    }
+    line-height: 1rem;
+}
+
+.about-span-bolder{
+    font-weight: 600;
+    margin-right: 0.5rem;
+    color: var(--text-light);
+    font-style: italic;
 }
 
 .myid-title{
-    font-size: 0.9rem;
+    font-size: var(--fontsmall);
     padding-left: 1rem;
     margin-bottom: 15px;
     font-weight: 600;
@@ -667,12 +669,10 @@ table tr:first-child td {
         margin: 0 0 0 1rem;
         padding: 0;
         li{
-            font-size: 0.9rem;
+            font-size: var(--fontsmall);
             margin: 0.5rem 0;
+            line-height: 1rem;
         }
-         li::marker{
-            color: var(--text-light);
-         }
     }
 }
 
@@ -711,11 +711,11 @@ table tr:first-child td {
     font-family: 'Courier New', Courier, monospace;
     color: var(--text-dark);
     outline: none;
-    font-size: $fontmedium;
+    font-size: var(--fontmedium);
 }
 
 #search .pagefind-ui .pagefind-ui__result-link{
-    font-size: $fontmedium;
+    font-size: var(--fontmedium);
     font-weight: 500;
     color: var(--primary)!important;
     font-family: 'Open Sans', sans-serif;
@@ -724,7 +724,7 @@ table tr:first-child td {
 
 #search .pagefind-ui .pagefind-ui__message{
     margin: 0;
-    font-size: $fontmedium;
+    font-size: var(--fontmedium);
     line-height: 1.7rem;
     color: var(--text-gray);
     font-weight: 500;
@@ -733,7 +733,7 @@ table tr:first-child td {
 
 #search .pagefind-ui .pagefind-ui__result .pagefind-ui__result-excerpt{
     font-family: 'Courier New', Courier, monospace;
-    font-size: $fontmedium;
+    font-size: var(--fontmedium);
     line-height: 1.7rem;
     margin-top: 1rem;
 }
@@ -743,13 +743,14 @@ table tr:first-child td {
     border-bottom: 1px solid var(--border-color);
     p, .pagefind-ui__result-link{
         color: var(--text-dark);
+        font-size: var(--fontmedium);
     }
 }
 
 #search .pagefind-ui .pagefind-ui__button{
     font-family: 'Open Sans', sans-serif;
     font-weight: 500;
-    font-size: $fontmedium;
+    font-size: var(--fontmedium);
     transition: all 0.2s;
     border: 1px solid var(--border-color);
     background-color: var(--background-color-site);
@@ -798,14 +799,17 @@ table tr:first-child td {
     margin-left: 0.5rem;
 }
 
-@media (max-width: 750px) {
-    .blog-wrapper, .main-nav{
-        width: 550px;
+@media (max-width: 850px) {
+    .blog-wrapper{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        box-sizing: border-box;
+        margin: 50px 0;
     }
-}
-
-@media (max-width: 550px) {
-    .blog-wrapper, .main-nav{
-        width: 430px;
+    .sidebar{
+        position: static;
+        margin-bottom: 2rem;
     }
 }
