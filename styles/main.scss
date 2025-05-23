@@ -140,7 +140,7 @@ footer{
     height: 80px;
     width: 80px;
     background-color: #12121321;
-    background-image: url("https://i.pinimg.com/736x/4e/ac/6f/4eac6fa482c120633f4d08b68ee18756.jpg");
+    background-image: url("/static/images/avatar.jpg");
     background-position: center;
     background-size: cover;
     border: 1px solid var(--border-color);
@@ -158,6 +158,7 @@ footer{
     padding: 10px 15px;
     border-radius: 5px;
     box-sizing: border-box;
+    text-transform: lowercase;
 }
 
 .header-big a{
@@ -613,6 +614,75 @@ table tr:first-child td {
     font-weight: 600;
 }
 
+.myid{
+    background-color: var(--background-color-site);
+    border: 1px solid var(--border-color);
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+    margin-top: 1rem;
+}
+
+.myid:before{
+    content: "";
+    height: 100%;
+    width: 4px;
+    background-color: var(--primary);
+    position: absolute;
+    left: 10px;
+    top: 0;
+}
+
+.about-span{
+    font-size: 0.9rem;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 0.5rem;
+    &-bolder{
+        font-weight: 600;
+        margin-right: 0.5rem;
+        color: var(--text-light);
+    }
+}
+
+.myid-title{
+    font-size: 0.9rem;
+    padding-left: 1rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 15px;
+    img{
+        margin-right: 0.5rem;
+    }
+}
+
+.myid-rows{
+    display: flex;
+    flex-direction: row;
+    ul{
+        margin: 0 0 0 1rem;
+        padding: 0;
+        li{
+            font-size: 0.9rem;
+            margin: 0.5rem 0;
+        }
+         li::marker{
+            color: var(--text-light);
+         }
+    }
+}
+
+.myid-row{
+    margin: 0 1.5rem 0 1rem;
+}
+
+.about-span:last-of-type{
+    margin-bottom: 0;
+}
 
 #search .pagefind-ui {
     max-width: 500px;

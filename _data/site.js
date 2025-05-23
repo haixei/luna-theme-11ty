@@ -1,10 +1,10 @@
 module.exports = {
   meta: {
-    title: "Sienna's Blog",
+    title: "Alex's Blog",
     description: "I like to build things. Software eng.",
     lang: "en",
     siteUrl: "https://example.com/",
-    author: "Sandy",
+    author: "Aleks",
   },
   feed: {
     subtitle: "Lorem ipsum dolor sit amet consecuteor",

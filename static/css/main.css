@@ -21,7 +21,7 @@ body[data-theme=light] {
   --text-dark: #302e2d;
   --text-gray: #575252;
   --text-light: #7a7574;
-  --primary: #307264;
+  --primary: #50998f;
   --primary-bg-color: #f7fdfb;
   --primary-bd-color: #b3d1c2;
   --highlighter: #d5f7f2;
@@ -31,7 +31,7 @@ body[data-theme=dark] {
   --background-color-site: #1c1c1d;
   --background-color-darker: #18181a;
   --background-color: #2b2b31;
-  --border-color: #343436;
+  --border-color: #38383a;
   --text-dark: #c2c2c2;
   --text-gray: #a0a0a0;
   --text-light: #818181;
@@ -178,7 +178,7 @@ footer span {
   height: 80px;
   width: 80px;
   background-color: rgba(18, 18, 19, 0.1294117647);
-  background-image: url("https://i.pinimg.com/736x/4e/ac/6f/4eac6fa482c120633f4d08b68ee18756.jpg");
+  background-image: url("/static/images/avatar.jpg");
   background-position: center;
   background-size: cover;
   border: 1px solid var(--border-color);
@@ -196,6 +196,7 @@ footer span {
   padding: 10px 15px;
   border-radius: 5px;
   box-sizing: border-box;
+  text-transform: lowercase;
 }
 
 .header-big a {
@@ -642,6 +643,76 @@ th a, td a {
 
 table tr:first-child td {
   font-weight: 600;
+}
+
+.myid {
+  background-color: var(--background-color-site);
+  border: 1px solid var(--border-color);
+  padding: 15px;
+  border-radius: 5px;
+  position: relative;
+  margin-top: 1rem;
+}
+
+.myid:before {
+  content: "";
+  height: 100%;
+  width: 4px;
+  background-color: var(--primary);
+  position: absolute;
+  left: 10px;
+  top: 0;
+}
+
+.about-span {
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 0.5rem;
+}
+.about-span-bolder {
+  font-weight: 600;
+  margin-right: 0.5rem;
+  color: var(--text-light);
+}
+
+.myid-title {
+  font-size: 0.9rem;
+  padding-left: 1rem;
+  margin-bottom: 15px;
+  font-weight: 600;
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 15px;
+}
+.myid-title img {
+  margin-right: 0.5rem;
+}
+
+.myid-rows {
+  display: flex;
+  flex-direction: row;
+}
+.myid-rows ul {
+  margin: 0 0 0 1rem;
+  padding: 0;
+}
+.myid-rows ul li {
+  font-size: 0.9rem;
+  margin: 0.5rem 0;
+}
+.myid-rows ul li::marker {
+  color: var(--text-light);
+}
+
+.myid-row {
+  margin: 0 1.5rem 0 1rem;
+}
+
+.about-span:last-of-type {
+  margin-bottom: 0;
 }
 
 #search .pagefind-ui {
