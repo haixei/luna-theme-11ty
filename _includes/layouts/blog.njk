@@ -3,12 +3,11 @@ layout: layouts/base.njk
 ---
 
 <div class="blog-wrapper">
-    <div class="header--site">
-      {% include 'components/navbar.njk' %}
+    {% include 'components/navbar.njk' %}
+    <div class="main-content">
       {% include 'components/headerbig.njk' %}
+      <content>
+        {{ content | safe }}
+      </content>
     </div>
-    <content>
-      {{ content | safe }}
-      {% include 'components/footer.njk' %}
-    </content>
  </div>

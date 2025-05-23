@@ -6,14 +6,11 @@ layout: layouts/blog.njk
   {% if coverIMG %}
     <img src="{{ coverIMG }}" class="post__cover">
   {% endif %}
+  <h1>{{ title }}</h1>
   <div class="toc-wrapper">
-    <span>Table Of Contents</span>
+    <span class="toc-header">Table Of Contents</span>
     {{ content | toc | safe }}
   </div>
-  {% if seriesName %}
-    <span class="series {% if series[seriesName] %}{{ seriesName }}{% endif %}">{{ seriesName | fullSeriesName }}</span>
-  {% endif %}
-  <h1>{{ title }}</h1>
   <div class="post-content">
     {{ content | safe }}
   </div>

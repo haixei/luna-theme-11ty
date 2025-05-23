@@ -1,9 +1,8 @@
 ---
-title: Introduction to the markdown.
+title: Introduction to the markdown 2
 description: This is a post that showcases most of the markdown possibilities.
 date: 2024-01-31
 seriesName: casual
-coverIMG: https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F31%2F33%2F73%2F3133731f586b21cbc296790a8ef0e7f0.jpg&f=1&nofb=1&ipt=e7f2b07e01c77807e4c7b4b31d93611de7dbd984874824fed4c9d450ca7b0513&ipo=images
 tags:
  - tutorial
 ---

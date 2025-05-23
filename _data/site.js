@@ -1,9 +1,10 @@
 module.exports = {
   meta: {
-    title: "Luna Theme",
-    description: "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+    title: "Sienna's Blog",
+    description: "I like to build things. Software eng.",
     lang: "en",
     siteUrl: "https://example.com/",
+    author: "Sandy",
   },
   feed: {
     subtitle: "Lorem ipsum dolor sit amet consecuteor",

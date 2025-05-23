@@ -1,53 +1,47 @@
 :root {
-  --background-color-site: #fafafa;
-  --background-color-darker: #f4f5f8;
+  --background-color-site: #faf6f6;
+  --background-color-darker: #fcf4f2;
   --background-color: #ffffff;
-  --border-color: #dde4e7;
-  --text-dark: #3d3f41;
-  --text-gray: #515558;
-  --text-light: #86898a;
-  --primary: #694d96;
-  --primary-bg-color: #f4ecfc;
-  --primary-bd-color: #e5ccfa;
-  --highlighter: #fdd9fb;
+  --border-color: #d8d3ce;
+  --text-dark: #302e2d;
+  --text-gray: #575252;
+  --text-light: #7a7574;
+  --primary: #6b53ad;
+  --primary-bg-color: #f5f3fc;
+  --primary-bd-color: #d0caf1;
+  --highlighter: #e5dcff;
 }
 
 body[data-theme=light] {
-  --background-color-site: #fafafa;
-  --background-color-darker: #f4f5f8;
+  --background-color-site: #fffffe;
+  --background-color-darker: #fcf4f2;
   --background-color: #ffffff;
-  --border-color: #dde4e7;
-  --text-dark: #3d3f41;
-  --text-gray: #515558;
-  --text-light: #86898a;
-  --primary: #694d96;
-  --primary-bg-color: #f4ecfc;
-  --primary-bd-color: #e5ccfa;
-  --highlighter: #ead9fd;
+  --border-color: #d8d3ce;
+  --text-dark: #302e2d;
+  --text-gray: #575252;
+  --text-light: #7a7574;
+  --primary: #307264;
+  --primary-bg-color: #f7fdfb;
+  --primary-bd-color: #b3d1c2;
+  --highlighter: #d5f7f2;
 }
 
 body[data-theme=dark] {
-  --background-color-site: #212124;
-  --background-color-darker: #1a1a1d;
-  --background-color: #26262c;
-  --border-color: #36363d;
+  --background-color-site: #1c1c1d;
+  --background-color-darker: #18181a;
+  --background-color: #2b2b31;
+  --border-color: #343436;
   --text-dark: #c2c2c2;
   --text-gray: #a0a0a0;
   --text-light: #818181;
-  --primary: #a895d4;
-  --primary-bg-color: #26253b;
-  --primary-bd-color: #39355c;
-  --highlighter: #2d275e;
-}
-body[data-theme=dark] .banner {
-  background-image: url("/static/images/banner-dark.jpg");
-}
-body[data-theme=dark] #search .pagefind-ui .pagefind-ui__search-input {
-  border: 1px solid #484852;
+  --primary: #7ec5bc;
+  --primary-bg-color: #253b38;
+  --primary-bd-color: #355b5c;
+  --highlighter: #1c493b;
 }
 
-.banner {
-  background-image: url("/static/images/banner-light.jpeg");
+body[data-theme=dark] #search .pagefind-ui .pagefind-ui__search-input {
+  border: 1px solid #484852;
 }
 
 /*# sourceMappingURL=variables.css.map */

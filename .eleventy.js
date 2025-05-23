@@ -7,14 +7,12 @@ const tocPlugin = require("eleventy-plugin-toc")
 const sup = require('markdown-it-sup')
 const mark = require('markdown-it-mark')
 const easyTables = require('markdown-it-easy-tables')
-const { execSync } = require('child_process')
 const mathjaxPlugin = require("eleventy-plugin-mathjax")
 const pluginRss = require("@11ty/eleventy-plugin-rss")
 const taskLists = require('markdown-it-task-lists')
 const footnote = require('markdown-it-footnote')
 const sub = require('markdown-it-sub')
 const lazyImagesPlugin = require('eleventy-plugin-lazyimages')
-const seriesData = require("./_data/series.js")
 
 module.exports = (config) => {
   config.addPlugin(navigationPlugin)
@@ -48,15 +46,6 @@ module.exports = (config) => {
     return DateTime.fromJSDate(dateObj, {zone: 'utc'}).toFormat("dd LLL, yyyy")
   })
 
-  config.addFilter("fullSeriesName", seriesName => {
-    return seriesData[seriesName].longName
-  })
-
-  config.addFilter("filterBySerie", (collection, seriesName) => {
-    return collection.filter(el => {
-      return el.data.seriesName != seriesName
-    })
-  })
 
   config.addCollection("tagList", collection => {
     const tagsObject = {}
@@ -79,29 +68,6 @@ module.exports = (config) => {
     })
 
     return tagList.sort((a, b) => b.tagCount - a.tagCount)
-  })
-
-  config.addCollection("seriesList", collection => {
-    const seriesObject = {}
-    collection.getAll().forEach(item => {
-      if (!item.data.seriesName) return;
-          if(typeof seriesObject[item.data.seriesName] === 'undefined') {
-            seriesObject[item.data.seriesName] = 1
-          } else {
-            seriesObject[item.data.seriesName] += 1
-          }
-    })
-
-    const seriesExpanded = {}
-    Object.keys(seriesObject).forEach(series => {
-      seriesExpanded[series] = { name: series, postCount: seriesObject[series], longName: seriesData[series].longName}
-    })
-
-    return seriesExpanded
-  })
-
-  config.on('eleventy.after', () => {
-    execSync(`npx pagefind --source _site --glob \"**/*.html\"`, { encoding: 'utf-8' })
   })
 
   config.addPairedAsyncShortcode(

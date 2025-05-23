@@ -20,7 +20,7 @@ permalink: /tags/{{ tag | slug }}/
 {% block content %}
 
 <div class="container">
-  <span class="section-title">Tagged<a class="tag-el" href="{{ '/tags/' | url }}{{ tag | slug }}">{{ tag }}</a></span>
+  <span class="section-title">Tagged as <a href="{{ '/tags/' | url }}{{ tag | slug }}">{{ tag }}</a></span>
 
   {% set posts = collections[tag] %}
   {% include 'components/postslist.njk' %}
