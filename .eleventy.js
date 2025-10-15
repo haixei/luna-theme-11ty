@@ -29,11 +29,16 @@ module.exports = (config) => {
                                       .use(footnote)
                                       .use(sub)
                                       .use(taskLists))
+
   config.addPlugin(tocPlugin, { tags: ["h2", "h3"] })
   markdownit().render('==marked==')
   markdownit().render('29^th^')
   
   config.addPassthroughCopy('static')
+
+  config.addPassthroughCopy("posts/**/images/*", {
+		mode: "html-relative"
+	})
   
   config.setDataDeepMerge(true);
 

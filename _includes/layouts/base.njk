@@ -6,14 +6,13 @@
   <title>{% if title %}{{ title }} | {{ site.meta.title }}{% else %}{{ site.meta.title }}{% endif %}</title>
   <meta name="description" content="{% if description %}{{ description }}{% else %}{{ site.meta.description }}{% endif %}">
   <link rel="stylesheet" href="{{ '/static/styles/main.css' | url }}" media="all">
-  <link rel="icon" type="image/x-icon" href="https://avatars.githubusercontent.com/u/40209164?v=4">
+  <link rel="icon" type="image/x-icon" href="/static/images/favicon.ico">
   <link href="/static/styles/prism-theme.css" rel="stylesheet">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body data-theme="light" class="preload">
-  {% include 'components/search.njk' %}
   {{ content | safe }}
   <script>
   const storedTheme = localStorage.getItem("__theme");
